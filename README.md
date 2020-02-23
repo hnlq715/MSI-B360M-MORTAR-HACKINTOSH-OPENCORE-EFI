@@ -108,25 +108,25 @@ OpenCore 拥有高度的可定制化，建议先参考下面的说明使用配�
 <br>
 STTINGS\高级\PCI子系统设置\Above 4G memory/Crypto Currency mining [允许]<br>
 <br>
-STTINGS\高级\内建显示配置\设置第一显卡 [PEG]<br>
-STTINGS\高级\内建显示配置\集成显卡多显示器 [允许] （如果使用拥有核显的处理器）<br>
+STTINGS\高级\内建显示配置\设置第一显卡 [PEG]*（仅同时拥有核显及独显需要手动设置）*<br>
+STTINGS\高级\内建显示配置\Integrated Graphics Share Memory [64M]*（如果使用拥有核显的处理器）*<br>
+STTINGS\高级\内建显示配置\集成显卡多显示器 [允许]*（如果使用拥有核显的处理器）*<br>
 <br>
-STTINGS\高级\ACPI设置\电源 LED 灯 [双色]（如果选择 [闪烁]，睡眠时电源灯将不断闪烁）<br>
+STTINGS\高级\ACPI设置\电源 LED 灯 [双色]*（如果选择 [闪烁]，睡眠时电源灯将不断闪烁）*<br>
 <br>
 STTINGS\高级\USB设置\XHCI Hand-off [允许]<br>
 STTINGS\高级\USB设置\传统USB支持 [允许]<br>
 <br>
 STTINGS\高级\电源管理设置\ErP Ready [允许]<br>
 <br>
-STTINGS\高级\Windows操作系统的配置\Windows 10 WHQL支持 [允许]<br>
-*开启时为「纯」UEFI 模式，否则为「兼容」UEFI 模式，推荐设置为允许*<br>
+STTINGS\高级\Windows操作系统的配置\Windows 10 WHQL支持 [允许]*（开启时为「纯」UEFI 模式，否则为「兼容」UEFI 模式，推荐设置为允许）*<br>
 STTINGS\高级\Windows操作系统的配置\MSI 快速开机 [禁止]<br>
 STTINGS\高级\Windows操作系统的配置\快速开机 [禁止]<br>
 <br>
 STTINGS\高级\唤醒事件设置\唤醒事件管理 [BIOS]<br>
 STTINGS\高级\唤醒事件设置\USB设备从S3/S4/S5唤醒 [允许]<br>
 <br>
-STTINGS\启动\启动NumLock状态 [关]（macOS 默认可使用数字键盘，只有 macOS 的话推荐关闭）<br>
+STTINGS\启动\启动NumLock状态 [关]*（macOS 默认可使用数字键盘，只有 macOS 的话推荐关闭）*<br>
 STTINGS\启动\启动模式选择 [UEFI]<br>
 <br>
 OC(Overclocking)\CPU 特征\Intel 虚拟化技术 [允许]（必须）<br>
