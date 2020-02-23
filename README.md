@@ -104,7 +104,7 @@ sudo defaults delete com.apple.loginwindow LogoutHook  //清空 LogoutHook 的�
 OpenCore 拥有高度的可定制化，建议先参考下面的说明使用配置好的基础版本，之后再通过 [xjn 博客](https://blog.xjn819.com/?p=543) 和 [黑果小兵博客](https://blog.daliansky.net/OpenCore-BootLoader.html) 学习更多内容进行修改。
 
 ### BIOS 设置
-*请先确定正在使用的 BIOS 版本，[迫击炮](https://cn.msi.com/Motherboard/support/B360M-MORTAR) 7B23v16 以上，[迫击炮钛金版](https://cn.msi.com/Motherboard/support/B360M-MORTAR-TITANIUM) 7B23vA6 以上，否则请参考官方文档升级 BIOS 至最新版本。*<br>
+*请先确定正在使用的 BIOS 版本，[迫击炮](https://cn.msi.com/Motherboard/support/B360M-MORTAR) 7B23v16 以上，[迫击炮钛金版](https://cn.msi.com/Motherboard/support/B360M-MORTAR-TITANIUM) 7B23vA6 以上，否则请参考官方文档升级 BIOS 至最新版本（v18 & vA8 版本可用）。*<br>
 <br>
 STTINGS\高级\PCI子系统设置\Above 4G memory/Crypto Currency mining [允许]<br>
 <br>
@@ -119,7 +119,7 @@ STTINGS\高级\USB设置\传统USB支持 [允许]<br>
 <br>
 STTINGS\高级\电源管理设置\ErP Ready [允许]<br>
 <br>
-STTINGS\高级\Windows操作系统的配置\Windows 10 WHQL支持 [允许]*（开启时为「纯」UEFI 模式，否则为「兼容」UEFI 模式，推荐设置为允许）*<br>
+STTINGS\高级\Windows操作系统的配置\Windows 10 WHQL支持 [允许]*（开启为「纯」UEFI 模式，否则为「兼容」UEFI 模式，推荐设置为允许）*<br>
 STTINGS\高级\Windows操作系统的配置\MSI 快速开机 [禁止]<br>
 STTINGS\高级\Windows操作系统的配置\快速开机 [禁止]<br>
 <br>
@@ -129,9 +129,9 @@ STTINGS\高级\唤醒事件设置\USB设备从S3/S4/S5唤醒 [允许]<br>
 STTINGS\启动\启动NumLock状态 [关]*（macOS 默认可使用数字键盘，只有 macOS 的话推荐关闭）*<br>
 STTINGS\启动\启动模式选择 [UEFI]<br>
 <br>
-OC(Overclocking)\CPU 特征\Intel 虚拟化技术 [允许]（必须）<br>
-OC(Overclocking)\CPU 特征\Intel VT-D 技术 [禁止]（必须）<br>
-OC(Overclocking)\CPU 特征\CFG锁定 [禁止]（必须！）<br>
+OC(Overclocking)\CPU 特征\Intel 虚拟化技术 [允许]*（必须）*<br>
+OC(Overclocking)\CPU 特征\Intel VT-D 技术 [禁止]*（必须）*<br>
+OC(Overclocking)\CPU 特征\CFG锁定 [禁止]*（必须）*<br>
 
 ### 直接使用
 仅适合使用 9600K 处理器的用户！<br>
@@ -186,7 +186,7 @@ OC(Overclocking)\CPU 特征\CFG锁定 [禁止]（必须！）<br>
    有两个方法可以解决这个问题。<br>
    方法一：在`/EFI/OC/config.plist`配置文件 Misc—–Boot——Resolution 处填写正确的显示器分辨率；<br>
    方法二：将 BIOS「STTINGS\启动\全荧幕商标」设置为 [允许]。<br>
-   两种方法选择其一即可，如果同时使用的话开机 logo 的显示依旧会不正常，本来更推荐方法二（会比方法一显示系统登陆界面略快），但反复测试后发现，如果在 BIOS 打开「Windows 10 WHQL支持」，使用方法二可能会导致**关机再开机的情况下丢失苹果 logo**，请测试后选择~~适合~~自己喜欢的方法。
+   两种方法选择其一即可，如果同时使用的话开机 logo 的显示依旧会不正常，原本更推荐方法二（会比方法一进入系统登陆界面略快一些），但反复测试后发现，如果在 BIOS 打开「Windows 10 WHQL支持」，使用方法二可能会导致**关机再开机时丢失苹果 logo**，请测试后选择~~适合~~自己喜欢的方法。
 2. **无法正常进入睡眠状态怎么办？**<br>
    目前所知的情况是 ~~bugOS~~macOS 10.15.2 及 10.15.3 存在睡眠相关 bugs，如果使用了最新的 EFI 仍然无法正常进入睡眠，请尝试到「系统偏好设置——安全性与隐私——隐私——定位服务」关闭「Siri 与听写」。
 3. **为什么推荐拥有核显的 CPU？**<br>
